@@ -22,5 +22,29 @@
         <argument
             android:name="name"
             app:argType="string" />
+        <action
+            android:id="@+id/action_personalInformationFragment_to_surveyPageFragment"
+            app:destination="@id/surveyPageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/surveyPageFragment"
+        android:name="com.example.surveyapp.ui.SurveyPageFragment"
+        android:label="fragment_survey_page"
+        tools:layout="@layout/fragment_survey_page">
+        <argument
+            android:name="personalInfo"
+            app:argType="com.example.surveyapp.data.model.PersonalInfoModel" />
+        <action
+            android:id="@+id/action_surveyPageFragment_to_surveyResultsFragment"
+            app:destination="@id/surveyResultsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/surveyResultsFragment"
+        android:name="com.example.surveyapp.ui.SurveyResultsFragment"
+        android:label="fragment_survey_results"
+        tools:layout="@layout/fragment_survey_results">
+        <argument
+            android:name="surveyInfo"
+            app:argType="com.example.surveyapp.data.model.InfoModel" />
     </fragment>
 </navigation>

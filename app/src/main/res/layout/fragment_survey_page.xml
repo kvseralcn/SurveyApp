@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.SurveyPageFragment">
+
+    <TextView
+        android:id="@+id/fragmentSurveyPage_twEMail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp" />
+
+    <TextView
+        android:id="@+id/fragmentSurveyPage_twName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp" />
+
+    <TextView
+        android:id="@+id/fragmentSurveyPage_twAge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp" />
+
+    <TextView
+        android:id="@+id/fragmentSurveyPage_twGender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp" />
+
+    <TextView
+        android:id="@+id/fragmentSurveyPage_twQuestion1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:text="Hangi platformlarda oyun oynuyorsunuz? (PC, Konsol, Mobil cihazlar vb.) " />
+
+    <EditText
+        android:id="@+id/fragmentSurveyPage_etQuestion1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/edittext_background"
+        android:ems="10"
+        android:inputType="text"
+        android:maxLines="99"
+        android:paddingBottom="8dp" />
+
+    <TextView
+        android:id="@+id/fragmentSurveyPage_twQuestion2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:text="Hangi türde oyunları daha çok oynuyorsunuz? (Aksiyon, RPG, Macera, Strateji, Spor, Yarış vb.)" />
+
+    <EditText
+        android:id="@+id/fragmentSurveyPage_etQuestion2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/edittext_background"
+        android:ems="10"
+        android:inputType="text"
+        android:maxLines="99"
+        android:paddingBottom="8dp" />
+
+    <TextView
+        android:id="@+id/fragmentSurveyPage_twQuestion3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:text="Hangi faktörler oyun seçiminizi etkiler? (Oyunun türü, Grafik kalitesi, Hikaye ve karakter gelişimi, İnceleme ve öneriler, Oyunun fiyatı vb.)" />
+
+    <EditText
+        android:id="@+id/fragmentSurveyPage_etQuestion3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/edittext_background"
+        android:ems="10"
+        android:inputType="text"
+        android:maxLines="99"
+        android:paddingBottom="8dp" />
+
+    <Button
+        android:id="@+id/fragmentSurveyPage_btnContinue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/button_background"
+        android:text="Devam"
+        android:textColor="#FFFFFF" />
+</LinearLayout>
