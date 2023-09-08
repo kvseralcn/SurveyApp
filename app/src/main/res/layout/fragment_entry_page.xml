@@ -59,7 +59,7 @@
             android:maxLength="35"
             android:padding="8dp"
             android:paddingBottom="8dp"
-            android:textCursorDrawable="@color/pink" />
+            android:textCursorDrawable="@drawable/custom_cursor" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/fragmentEntryPage_btnStart"

@@ -49,4 +49,5 @@
     <string name="survey_results">Anket Sonuçları</string>
     <string name="share">Paylaş</string>
     <string name="unknown">Bilgi alınamadı.</string>
+    <string name="edittext_empty_error">Bu alan boş bırakılamaz!</string>
 </resources>

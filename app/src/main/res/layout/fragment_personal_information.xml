@@ -47,7 +47,8 @@
                 android:hint="@string/email"
                 android:inputType="textEmailAddress"
                 android:padding="8dp"
-                android:paddingBottom="8dp" />
+                android:paddingBottom="8dp"
+                android:textCursorDrawable="@drawable/custom_cursor" />
 
             <TextView
                 android:layout_width="match_parent"

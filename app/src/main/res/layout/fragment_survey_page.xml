@@ -38,7 +38,7 @@
                 android:maxLines="99"
                 android:padding="8dp"
                 android:paddingBottom="8dp"
-                android:textCursorDrawable="@color/pink" />
+                android:textCursorDrawable="@drawable/custom_cursor" />
 
             <TextView
                 android:id="@+id/fragmentSurveyPage_tvQuestion2"
@@ -58,7 +58,7 @@
                 android:maxLines="99"
                 android:padding="8dp"
                 android:paddingBottom="8dp"
-                android:textCursorDrawable="@color/pink" />
+                android:textCursorDrawable="@drawable/custom_cursor" />
 
             <TextView
                 android:id="@+id/fragmentSurveyPage_tvQuestion3"
@@ -78,7 +78,7 @@
                 android:maxLines="99"
                 android:padding="8dp"
                 android:paddingBottom="8dp"
-                android:textCursorDrawable="@color/pink" />
+                android:textCursorDrawable="@drawable/custom_cursor" />
 
             <TextView
                 android:id="@+id/fragmentSurveyPage_tvQuestion4"
@@ -98,7 +98,7 @@
                 android:maxLines="99"
                 android:padding="8dp"
                 android:paddingBottom="8dp"
-                android:textCursorDrawable="@color/pink" />
+                android:textCursorDrawable="@drawable/custom_cursor" />
 
             <TextView
                 android:id="@+id/fragmentSurveyPage_tvQuestion5"
@@ -118,7 +118,7 @@
                 android:maxLines="99"
                 android:padding="8dp"
                 android:paddingBottom="8dp"
-                android:textCursorDrawable="@color/pink" />
+                android:textCursorDrawable="@drawable/custom_cursor" />
 
             <TextView
                 android:id="@+id/fragmentSurveyPage_tvQuestion6"
@@ -138,7 +138,7 @@
                 android:maxLines="99"
                 android:padding="8dp"
                 android:paddingBottom="8dp"
-                android:textCursorDrawable="@color/pink" />
+                android:textCursorDrawable="@drawable/custom_cursor" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/fragmentSurveyPage_btnContinue"

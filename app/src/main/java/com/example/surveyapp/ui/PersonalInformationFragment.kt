@@ -70,17 +70,22 @@ class PersonalInformationFragment : Fragment() {
 
     private fun initListeners() {
         binding.fragmentPersonalInformationBtnContinue.setOnClickListener {
-            val information = PersonalInfoModel(
-                binding.fragmentPersonalInformationTwName.text.toString(), // TODO: validate
-                binding.fragmentPersonalInformationEtEmail.text.toString(), // TODO: validate
-                selectedAge,
-                selectedGender
-            )
-            val action =
-                PersonalInformationFragmentDirections.actionPersonalInformationFragmentToSurveyPageFragment(
-                    information
+            if (binding.fragmentPersonalInformationEtEmail.text.isEmpty()) {
+                binding.fragmentPersonalInformationEtEmail.error =
+                    getString(R.string.edittext_empty_error)
+            } else {
+                val information = PersonalInfoModel(
+                    binding.fragmentPersonalInformationTwName.text.toString(),
+                    binding.fragmentPersonalInformationEtEmail.text.toString(),
+                    selectedAge,
+                    selectedGender
                 )
-            findNavController().navigate(action)
+                val action =
+                    PersonalInformationFragmentDirections.actionPersonalInformationFragmentToSurveyPageFragment(
+                        information
+                    )
+                findNavController().navigate(action)
+            }
         }
     }
 
@@ -96,17 +101,17 @@ class PersonalInformationFragment : Fragment() {
 
         binding.fragmentPersonalInformationRgRadioGroup.setOnCheckedChangeListener { _, checkedId ->
             when (checkedId) {
-                R.id.fragmentPersonalInformation_radio_age_under_18 -> selectedGender = ageList[0]
+                R.id.fragmentPersonalInformation_radio_age_under_18 -> selectedAge = ageList[0]
 
-                R.id.fragmentPersonalInformation_radio_age_18_24 -> selectedGender = ageList[1]
+                R.id.fragmentPersonalInformation_radio_age_18_24 -> selectedAge = ageList[1]
 
-                R.id.fragmentPersonalInformation_radio_age_25_34 -> selectedGender = ageList[2]
+                R.id.fragmentPersonalInformation_radio_age_25_34 -> selectedAge = ageList[2]
 
-                R.id.fragmentPersonalInformation_radio_age_35_44 -> selectedGender = ageList[3]
+                R.id.fragmentPersonalInformation_radio_age_35_44 -> selectedAge = ageList[3]
 
-                R.id.fragmentPersonalInformation_radio_age_45_54 -> selectedGender = ageList[4]
+                R.id.fragmentPersonalInformation_radio_age_45_54 -> selectedAge = ageList[4]
 
-                R.id.fragmentPersonalInformation_radio_age_55_and_above -> selectedGender =
+                R.id.fragmentPersonalInformation_radio_age_55_and_above -> selectedAge =
                     ageList[5]
 
                 else -> requireActivity().getString(R.string.unknown)

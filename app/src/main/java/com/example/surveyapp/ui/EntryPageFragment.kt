@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.example.surveyapp.R
 import com.example.surveyapp.databinding.FragmentEntryPageBinding
 
 class EntryPageFragment : Fragment() {
@@ -19,10 +20,14 @@ class EntryPageFragment : Fragment() {
         binding = FragmentEntryPageBinding.inflate(inflater, container, false)
         binding.fragmentEntryPageBtnStart.setOnClickListener {
             // findNavController().navigate(R.id.action_entryPageFragment_to_personalInformationFragment)
-            findNavController().navigate(
-                EntryPageFragmentDirections
-                    .actionEntryPageFragmentToPersonalInformationFragment(name = binding.fragmentEntryPageEtName.text.toString())
-            )
+            if (binding.fragmentEntryPageEtName.text.isEmpty()) {
+                binding.fragmentEntryPageEtName.error = getString(R.string.edittext_empty_error)
+            } else {
+                findNavController().navigate(
+                    EntryPageFragmentDirections
+                        .actionEntryPageFragmentToPersonalInformationFragment(name = binding.fragmentEntryPageEtName.text.toString())
+                )
+            }
         }
         return binding.root
     }
