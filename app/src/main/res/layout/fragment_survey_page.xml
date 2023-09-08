@@ -3,115 +3,154 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/card_background"
+    android:gravity="center"
     android:orientation="vertical"
     tools:context=".ui.SurveyPageFragment">
 
-    <TextView
-        android:id="@+id/fragmentSurveyPage_twEMail"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="32dp" />
+        android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/fragmentSurveyPage_twName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="32dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="32dp"
+            android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/fragmentSurveyPage_twAge"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="32dp" />
+            <TextView
+                android:id="@+id/fragmentSurveyPage_tvQuestion1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/survey_question_1" />
 
-    <TextView
-        android:id="@+id/fragmentSurveyPage_twGender"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="32dp" />
+            <EditText
+                android:id="@+id/fragmentSurveyPage_etQuestion1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/edittext_background"
+                android:ems="10"
+                android:inputType="text"
+                android:maxLines="99"
+                android:padding="8dp"
+                android:paddingBottom="8dp"
+                android:textCursorDrawable="@color/pink" />
 
-    <TextView
-        android:id="@+id/fragmentSurveyPage_twQuestion1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="32dp"
-        android:text="Hangi platformlarda oyun oynuyorsunuz? (PC, Konsol, Mobil cihazlar vb.) " />
+            <TextView
+                android:id="@+id/fragmentSurveyPage_tvQuestion2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/survey_question_2" />
 
-    <EditText
-        android:id="@+id/fragmentSurveyPage_etQuestion1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="32dp"
-        android:background="@drawable/edittext_background"
-        android:ems="10"
-        android:inputType="text"
-        android:maxLines="99"
-        android:paddingBottom="8dp" />
+            <EditText
+                android:id="@+id/fragmentSurveyPage_etQuestion2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/edittext_background"
+                android:ems="10"
+                android:inputType="text"
+                android:maxLines="99"
+                android:padding="8dp"
+                android:paddingBottom="8dp"
+                android:textCursorDrawable="@color/pink" />
 
-    <TextView
-        android:id="@+id/fragmentSurveyPage_twQuestion2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="32dp"
-        android:text="Hangi türde oyunları daha çok oynuyorsunuz? (Aksiyon, RPG, Macera, Strateji, Spor, Yarış vb.)" />
+            <TextView
+                android:id="@+id/fragmentSurveyPage_tvQuestion3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/survey_question_3" />
 
-    <EditText
-        android:id="@+id/fragmentSurveyPage_etQuestion2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="32dp"
-        android:background="@drawable/edittext_background"
-        android:ems="10"
-        android:inputType="text"
-        android:maxLines="99"
-        android:paddingBottom="8dp" />
+            <EditText
+                android:id="@+id/fragmentSurveyPage_etQuestion3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/edittext_background"
+                android:ems="10"
+                android:inputType="text"
+                android:maxLines="99"
+                android:padding="8dp"
+                android:paddingBottom="8dp"
+                android:textCursorDrawable="@color/pink" />
 
-    <TextView
-        android:id="@+id/fragmentSurveyPage_twQuestion3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="32dp"
-        android:text="Hangi faktörler oyun seçiminizi etkiler? (Oyunun türü, Grafik kalitesi, Hikaye ve karakter gelişimi, İnceleme ve öneriler, Oyunun fiyatı vb.)" />
+            <TextView
+                android:id="@+id/fragmentSurveyPage_tvQuestion4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/survey_question_4" />
 
-    <EditText
-        android:id="@+id/fragmentSurveyPage_etQuestion3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="32dp"
-        android:background="@drawable/edittext_background"
-        android:ems="10"
-        android:inputType="text"
-        android:maxLines="99"
-        android:paddingBottom="8dp" />
+            <EditText
+                android:id="@+id/fragmentSurveyPage_etQuestion4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/edittext_background"
+                android:ems="10"
+                android:inputType="text"
+                android:maxLines="99"
+                android:padding="8dp"
+                android:paddingBottom="8dp"
+                android:textCursorDrawable="@color/pink" />
 
-    <Button
-        android:id="@+id/fragmentSurveyPage_btnContinue"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="end"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:background="@drawable/button_background"
-        android:text="Devam"
-        android:textColor="#FFFFFF" />
+            <TextView
+                android:id="@+id/fragmentSurveyPage_tvQuestion5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/survey_question_5" />
+
+            <EditText
+                android:id="@+id/fragmentSurveyPage_etQuestion5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/edittext_background"
+                android:ems="10"
+                android:inputType="text"
+                android:maxLines="99"
+                android:padding="8dp"
+                android:paddingBottom="8dp"
+                android:textCursorDrawable="@color/pink" />
+
+            <TextView
+                android:id="@+id/fragmentSurveyPage_tvQuestion6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/survey_question_6" />
+
+            <EditText
+                android:id="@+id/fragmentSurveyPage_etQuestion6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/edittext_background"
+                android:ems="10"
+                android:inputType="text"
+                android:maxLines="99"
+                android:padding="8dp"
+                android:paddingBottom="8dp"
+                android:textCursorDrawable="@color/pink" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/fragmentSurveyPage_btnContinue"
+                style="@style/PrimaryButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="64dp"
+                android:text="@string/continue_text" />
+        </LinearLayout>
+    </ScrollView>
+
+
 </LinearLayout>

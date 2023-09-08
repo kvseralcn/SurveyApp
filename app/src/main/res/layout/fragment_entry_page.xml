@@ -1,55 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:gravity="bottom"
     android:orientation="vertical"
     tools:context=".ui.EntryPageFragment">
 
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animationView"
+        android:layout_width="320dp"
+        android:layout_height="320dp"
+        android:layout_gravity="center"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/gamer_animation" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:text="Survey"
-        android:textColor="#1a2845"
+        android:text="@string/game_survey_title"
+        android:textColor="@color/title_color"
         android:textSize="32sp"
         android:textStyle="bold" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="16dp"
-        android:text="Anketimize katılmadan önce, sizin hakkınızda bazı temel bilgileri toplamamız gerekiyor. Lütfen aşağıdaki alanı doldurarak başlayın."
-        android:textColor="#1a2845"
-        android:textSize="14sp" />
-
-    <EditText
-        android:id="@+id/fragmentEntryPage_etName"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:background="@drawable/edittext_background"
-        android:ems="10"
-        android:hint="Ad Soyad"
-        android:inputType="textPersonName"
-        android:maxLength="35"
-        android:textColorHint="#3B608C"
-        android:textSize="18sp" />
+        android:background="@drawable/card_background"
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/fragmentEntryPage_btnStart"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="end"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:background="@drawable/button_background"
-        android:text="Başla"
-        android:textColor="#FFFFFF" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/game_survey_description"
+            android:textColor="@color/description_color"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/fragmentEntryPage_etName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/edittext_background"
+            android:ems="10"
+            android:hint="@string/name_surname"
+            android:inputType="textPersonName"
+            android:maxLength="35"
+            android:padding="8dp"
+            android:paddingBottom="8dp"
+            android:textCursorDrawable="@color/pink" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/fragmentEntryPage_btnStart"
+            style="@style/PrimaryButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="32dp"
+            android:enabled="true"
+            android:text="@string/start" />
+    </LinearLayout>
 
 </LinearLayout>

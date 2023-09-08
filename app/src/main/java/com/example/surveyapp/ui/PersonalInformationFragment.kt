@@ -7,8 +7,10 @@ import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.TextView
+import androidx.activity.OnBackPressedCallback
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
+import androidx.navigation.NavOptions
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.example.surveyapp.R
@@ -19,46 +21,101 @@ class PersonalInformationFragment : Fragment() {
     private lateinit var binding: FragmentPersonalInformationBinding
     private val args by navArgs<PersonalInformationFragmentArgs>()
 
+    lateinit var selectedGender: String
+    private lateinit var selectedAge: String
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        //Set default values.
+        selectedGender = requireActivity().getString(R.string.unknown)
+        selectedAge = requireActivity().getString(R.string.unknown)
 
         val name: String = args.name
         binding.fragmentPersonalInformationTwName.text = name
+        setOnBackPressedCallBack()
+        initGenderSpinner()
+        initGenderRadioGroup()
+        initListeners()
+    }
+
+    private fun setOnBackPressedCallBack() {
+        val callback: OnBackPressedCallback =
+            object : OnBackPressedCallback(true) {
+                override fun handleOnBackPressed() {
+                    redirectToStartPage()
+                }
+            }
+        activity?.onBackPressedDispatcher?.addCallback(viewLifecycleOwner, callback)
+    }
+
+    private fun redirectToStartPage() {
+        findNavController().navigate(
+            R.id.entryPageFragment,
+            null,
+            NavOptions.Builder()
+                .setPopUpTo(findNavController().graph.startDestinationId, true)
+                .build()
+        )
     }
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentPersonalInformationBinding.inflate(inflater, container, false)
-        var genderList = arrayOf("Seçiniz", "Kadın", "Erkek", "Diğer")
-        var gender: String = "Bilgi alınamadı."
 
-        var age: String = "Bilgi alınamadı."
-        binding.fragmentPersonalInformationRgRadioGroup.setOnCheckedChangeListener { radioGroup, checkedId ->
+        return binding.root
+    }
+
+    private fun initListeners() {
+        binding.fragmentPersonalInformationBtnContinue.setOnClickListener {
+            val information = PersonalInfoModel(
+                binding.fragmentPersonalInformationTwName.text.toString(), // TODO: validate
+                binding.fragmentPersonalInformationEtEmail.text.toString(), // TODO: validate
+                selectedAge,
+                selectedGender
+            )
+            val action =
+                PersonalInformationFragmentDirections.actionPersonalInformationFragmentToSurveyPageFragment(
+                    information
+                )
+            findNavController().navigate(action)
+        }
+    }
+
+    private fun initGenderRadioGroup() {
+        val ageList = requireActivity().resources.getStringArray(R.array.age_list)
+
+        binding.fragmentPersonalInformationRadioAgeUnder18.text = ageList[0]
+        binding.fragmentPersonalInformationRadioAge1824.text = ageList[1]
+        binding.fragmentPersonalInformationRadioAge2534.text = ageList[2]
+        binding.fragmentPersonalInformationRadioAge3544.text = ageList[3]
+        binding.fragmentPersonalInformationRadioAge4554.text = ageList[4]
+        binding.fragmentPersonalInformationRadioAge55AndAbove.text = ageList[5]
+
+        binding.fragmentPersonalInformationRgRadioGroup.setOnCheckedChangeListener { _, checkedId ->
             when (checkedId) {
-                R.id.fragmentPersonalInformation_radio_age_under_18 -> age =
-                    "18 yaşından küçük"
+                R.id.fragmentPersonalInformation_radio_age_under_18 -> selectedGender = ageList[0]
 
-                R.id.fragmentPersonalInformation_radio_age_18_24 -> age =
-                    "18-24 yaş aralığında"
+                R.id.fragmentPersonalInformation_radio_age_18_24 -> selectedGender = ageList[1]
 
-                R.id.fragmentPersonalInformation_radio_age_25_34 -> age =
-                    "25-34 yaş aralığında"
+                R.id.fragmentPersonalInformation_radio_age_25_34 -> selectedGender = ageList[2]
 
-                R.id.fragmentPersonalInformation_radio_age_35_44 -> age =
-                    "35-44 yaş aralığında"
+                R.id.fragmentPersonalInformation_radio_age_35_44 -> selectedGender = ageList[3]
 
-                R.id.fragmentPersonalInformation_radio_age_45_54 -> age =
-                    "45-54 yaş aralığında"
+                R.id.fragmentPersonalInformation_radio_age_45_54 -> selectedGender = ageList[4]
 
-                R.id.fragmentPersonalInformation_radio_age_55_and_above -> age =
-                    "55 yaşından büyük"
+                R.id.fragmentPersonalInformation_radio_age_55_and_above -> selectedGender =
+                    ageList[5]
 
-                else -> "Bilinmeyen yaş aralığı"
+                else -> requireActivity().getString(R.string.unknown)
             }
         }
+    }
+
+    private fun initGenderSpinner() {
+        val genderList = requireActivity().resources.getStringArray(R.array.gender_list)
 
         val arrayAdapter = object : ArrayAdapter<String>(
             this.requireContext(),
@@ -72,10 +129,10 @@ class PersonalInformationFragment : Fragment() {
             ): View {
                 val v: View
                 if (position == 0) {
-                    val tw: TextView = TextView(context)
-                    tw.height = 0
-                    tw.isVisible = false
-                    v = tw
+                    val tv = TextView(context)
+                    tv.height = 0
+                    tv.isVisible = false
+                    v = tv
                 } else {
                     v = super.getDropDownView(position, null, parent)
                 }
@@ -91,29 +148,13 @@ class PersonalInformationFragment : Fragment() {
                     position: Int,
                     p3: Long
                 ) {
-                    gender = genderList[position]
+                    selectedGender = genderList[position]
                 }
 
                 override fun onNothingSelected(p0: AdapterView<*>?) {
-                    gender = "Bilgi alınamadı."
+                    selectedGender = requireActivity().getString(R.string.unknown)
                 }
 
             }
-
-        binding.fragmentPersonalInformationBtnContinue.setOnClickListener {
-            val information = PersonalInfoModel(
-                binding.fragmentPersonalInformationTwName.text.toString(),
-                binding.fragmentPersonalInformationEtEmail.text.toString(),
-                age,
-                gender
-            )
-            val action =
-                PersonalInformationFragmentDirections.actionPersonalInformationFragmentToSurveyPageFragment(
-                    information
-                )
-            findNavController().navigate(action)
-        }
-
-        return binding.root
     }
 }

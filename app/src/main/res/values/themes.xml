@@ -1,8 +1,12 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <!-- Base application theme. -->
     <style name="Base.Theme.SurveyApp" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">#E48FBE</item>
+        <item name="colorSecondary">#E48FBE</item>
+        <item name="colorPrimaryDark">#9394E3</item>
+        <item name="colorAccent">@color/pink</item>
     </style>
 
     <style name="Theme.SurveyApp" parent="Base.Theme.SurveyApp" />

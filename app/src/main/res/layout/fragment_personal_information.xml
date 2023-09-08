@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFD5D5"
+    android:background="@color/card_background"
     android:orientation="vertical"
     tools:context=".ui.PersonalInformationFragment">
 
@@ -13,16 +13,17 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
             android:orientation="vertical">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
-                android:text="Hoş geldin"
-                android:textColor="#575050"
+                android:text="@string/hello"
+                android:textColor="@color/text_color_dark"
                 android:textSize="32sp"
                 android:textStyle="bold" />
 
@@ -30,10 +31,8 @@
                 android:id="@+id/fragmentPersonalInformation_twName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
-                android:textColor="#575050"
+                android:textColor="@color/text_color_dark"
                 android:textSize="32sp"
                 android:textStyle="bold" />
 
@@ -41,91 +40,75 @@
                 android:id="@+id/fragmentPersonalInformation_etEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="32dp"
                 android:layout_marginTop="32dp"
-                android:layout_marginEnd="32dp"
                 android:background="@drawable/edittext_background"
                 android:drawableStart="@drawable/baseline_email_24"
                 android:ems="10"
-                android:hint=" Email"
+                android:hint="@string/email"
                 android:inputType="textEmailAddress"
+                android:padding="8dp"
                 android:paddingBottom="8dp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_above="@id/fragmentPersonalInformation_rgRadioGroup"
-                android:layout_marginStart="32dp"
                 android:layout_marginTop="32dp"
-                android:layout_marginEnd="32dp"
-                android:text="Yaşınız nedir?"
+                android:text="@string/whats_your_age"
                 android:textColor="@android:color/background_dark"
-                android:textSize="16dp" />
+                android:textSize="16sp" />
 
             <RadioGroup
                 android:id="@+id/fragmentPersonalInformation_rgRadioGroup"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="32dp"
                 android:layout_marginTop="16dp"
-                android:layout_marginEnd="32dp"
                 android:orientation="vertical">
 
                 <RadioButton
                     android:id="@+id/fragmentPersonalInformation_radio_age_under_18"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="18 yaş altı" />
+                    android:layout_height="wrap_content" />
 
                 <RadioButton
                     android:id="@+id/fragmentPersonalInformation_radio_age_18_24"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="18-24" />
+                    android:layout_height="wrap_content" />
 
                 <RadioButton
                     android:id="@+id/fragmentPersonalInformation_radio_age_25_34"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="25-34" />
+                    android:layout_height="wrap_content" />
 
                 <RadioButton
                     android:id="@+id/fragmentPersonalInformation_radio_age_35_44"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="35-44" />
+                    android:layout_height="wrap_content" />
 
                 <RadioButton
                     android:id="@+id/fragmentPersonalInformation_radio_age_45_54"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="45-54" />
+                    android:layout_height="wrap_content" />
 
                 <RadioButton
                     android:id="@+id/fragmentPersonalInformation_radio_age_55_and_above"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="55 ve üzeri" />
+                    android:layout_height="wrap_content" />
             </RadioGroup>
 
             <Spinner
                 android:id="@+id/fragmentPersonalInformation_spCategory"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="32dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="32dp" />
+                android:layout_marginTop="16dp" />
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/fragmentPersonalInformation_btnContinue"
+                style="@style/PrimaryButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
                 android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
-                android:background="@drawable/button_background"
-                android:text="Devam"
-                android:textColor="#FFFFFF" />
+                android:text="@string/continue_text" />
         </LinearLayout>
 
     </ScrollView>

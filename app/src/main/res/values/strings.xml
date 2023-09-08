@@ -1,5 +1,52 @@
 <resources>
     <string name="app_name">SurveyApp</string>
-    <!-- TODO: Remove or change this placeholder text -->
+
+    <!-- Arrays -->
+    <string-array name="gender_list">
+        <item name="please_select">Seçiniz</item>
+        <item name="female">Kadın</item>
+        <item name="male">Erkek</item>
+        <item name="other">Diğer</item>
+    </string-array>
+
+    <string-array name="age_list">
+        <item name="under_eighteen">18 yaş altı</item>
+        <item name="age_option_1">18–24</item>
+        <item name="age_option_2">25–34</item>
+        <item name="age_option_3">35–44</item>
+        <item name="age_option_4">45–54</item>
+        <item name="age_option_5">55 ve üzeri</item>
+    </string-array>
+
+    <!-- Texts -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="game_survey_title">Oyun Anketi</string>
+    <string name="game_survey_description">Anketimize katılmadan önce, sizin hakkınızda bazı temel bilgileri toplamamız gerekiyor. Lütfen aşağıdaki alanı doldurarak başlayın.</string>
+    <string name="name_surname">Ad Soyad</string>
+    <string name="start">Başla</string>
+    <string name="hello">Merhaba</string>
+    <string name="email">E-posta</string>
+    <string name="whats_your_age">Yaşınız nedir?</string>
+    <string name="continue_text">Devam</string>
+    <string name="survey_share_text">%1$s katılımcısının bilgileri şu şekildedir:\n
+                    Email: %2$s \n
+                    Yaş grubu: %3$s \n
+                    Cinsiyet: %4$s \n
+                            Oyun oynadığı platform: %5$s \n
+                            Daha çok tercih ettiği oyun türü: %6$s \n
+                            Oyun seçimini etkileyen faktör: %7$s \n
+                            En fazla zaman ayırdığı oyunlar: %8$s \n
+                            Oyunlarını indirmeyi tercih ettiği platform: %9$s \n
+                            İnceleme ve yorumları takip ettiği platform: %10$s</string>
+
+    <!-- Survey Questions -->
+    <string name="survey_question_1">Hangi platformlarda oyun oynuyorsunuz? (PC, Konsol, Mobil cihazlar vb.)</string>
+    <string name="survey_question_2">Hangi türde oyunları daha çok oynuyorsunuz? (Aksiyon, RPG, Macera, Strateji, Spor, Yarış vb.)</string>
+    <string name="survey_question_3">Hangi faktörler oyun seçiminizi etkiler? (Oyunun türü, Grafik kalitesi, Hikaye ve karakter gelişimi, İnceleme ve öneriler, Oyunun fiyatı vb.)</string>
+    <string name="survey_question_4">Hangi oyunlara daha fazla zaman ayırıyorsunuz: Çevrimiçi çok oyunculu oyunlar mı, yoksa tek oyunculu oyunlar mı?</string>
+    <string name="survey_question_5">Oyunlarınızı nereden indiriyorsunuz veya satın alıyorsunuz? (Steam, Epic Games Store, PlayStation Store, App Store, Google Play Store, fiziksel kopya)</string>
+    <string name="survey_question_6">Hangi oyunları oynamadan önce inceleme ve yorumlara bakıyorsunuz? (YouTube videoları, Reddit, oyun inceleme siteleri)</string>
+    <string name="survey_results">Anket Sonuçları</string>
+    <string name="share">Paylaş</string>
+    <string name="unknown">Bilgi alınamadı.</string>
 </resources>
