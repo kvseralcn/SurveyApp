@@ -46,8 +46,18 @@
     <string name="survey_question_4">Hangi oyunlara daha fazla zaman ayırıyorsunuz: Çevrimiçi çok oyunculu oyunlar mı, yoksa tek oyunculu oyunlar mı?</string>
     <string name="survey_question_5">Oyunlarınızı nereden indiriyorsunuz veya satın alıyorsunuz? (Steam, Epic Games Store, PlayStation Store, App Store, Google Play Store, fiziksel kopya)</string>
     <string name="survey_question_6">Hangi oyunları oynamadan önce inceleme ve yorumlara bakıyorsunuz? (YouTube videoları, Reddit, oyun inceleme siteleri)</string>
+
+    <!-- Survey Result -->
     <string name="survey_results">Anket Sonuçları</string>
     <string name="share">Paylaş</string>
     <string name="unknown">Bilgi alınamadı.</string>
     <string name="edittext_empty_error">Bu alan boş bırakılamaz!</string>
+    <string name="age">Yaş Aralığı</string>
+    <string name="gender">Cinsiyet</string>
+    <string name="question_1">Soru 1</string>
+    <string name="question_2">Soru 2</string>
+    <string name="question_3">Soru 3</string>
+    <string name="question_4">Soru 4</string>
+    <string name="question_5">Soru 5</string>
+    <string name="question_6">Soru 6</string>
 </resources>

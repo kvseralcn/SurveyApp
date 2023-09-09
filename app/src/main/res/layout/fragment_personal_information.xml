@@ -48,6 +48,7 @@
                 android:inputType="textEmailAddress"
                 android:padding="8dp"
                 android:paddingBottom="8dp"
+                android:drawablePadding="8dp"
                 android:textCursorDrawable="@drawable/custom_cursor" />
 
             <TextView

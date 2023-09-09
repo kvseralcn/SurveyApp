@@ -5,4 +5,16 @@
         <item name="android:background">@drawable/primary_button_background</item>
         <item name="android:textColor">@android:color/white</item>
     </style>
+
+    <style name="BaseText">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="LabelText" parent="BaseText">
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="ValueText" parent="BaseText">
+        <item name="android:textStyle">bold</item>
+    </style>
 </resources>
