@@ -18,5 +18,5 @@ A simple survey application. This app has been developed for the UP School Educa
 
 
 
-https://github.com/kvseralcn/SurveyApp/assets/31164478/64754c33-3150-42d6-bb84-4dc430ec843b
+https://github.com/kvseralcn/SurveyApp/assets/31164478/85b18703-e4c8-4691-bc42-1c10958bfda0
 
