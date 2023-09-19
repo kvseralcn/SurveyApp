@@ -4,7 +4,7 @@ A simple survey application. This app has been developed for the UP School Educa
 
 ## Features
 
-- The user can share the survey results in text format using a "Share" button.
+- Users can share the survey results in text format using a "Share" button.
 
 
 ## Tech
